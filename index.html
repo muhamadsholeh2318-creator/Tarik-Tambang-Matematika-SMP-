@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260831-01-4b600cf","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/50d846425a1e5082.telemetry_sdk.js" integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarik Tambang Matematika SMP</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #123a68;
+      --blue: #55b7ee;
+      --blue-dark: #1976bd;
+      --red: #ef4e5c;
+      --cream: #fffdf5;
+      --rope-shift: 0%;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      font-family: "Fira Sans", sans-serif;
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible {
+      outline: 4px solid #ffd65a;
+      outline-offset: 3px;
+    }
+
+    .screen {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      padding: 28px clamp(16px, 4vw, 56px);
+    }
+
+    .mode-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      width: 150px;
+      height: 54px;
+      background: rgba(255,255,255,.67);
+      border-radius: 99px;
+      filter: blur(.2px);
+      pointer-events: none;
+    }
+    .cloud::before, .cloud::after {
+      content: "";
+      position: absolute;
+      background: inherit;
+      border-radius: 50%;
+    }
+    .cloud::before { width: 64px; height: 64px; left: 26px; bottom: 14px; }
+    .cloud::after { width: 52px; height: 52px; right: 21px; bottom: 12px; }
+    .cloud-a { top: 8%; left: 5%; }
+    .cloud-b { right: 6%; top: 21%; transform: scale(.72); }
+    .cloud-c { bottom: 7%; left: 10%; transform: scale(.55); }
+
+    .hero-mark {
+      width: 78px;
+      height: 78px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      background: #ef4e5c;
+      color: white;
+      box-shadow: 0 12px 0 #c83e51, 0 20px 30px rgba(66, 122, 175, .22);
+      transform: rotate(-5deg);
+      margin-bottom: 18px;
+    }
+    .hero-mark i { width: 42px; height: 42px; }
+
+    .mode-title {
+      text-align: center;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .mode-subtitle {
+      text-align: center;
+      margin: 10px 0 28px;
+      font-weight: 600;
+    }
+
+    .mode-grid {
+      width: min(1040px, 100%);
+      display: grid;
+      grid-template-columns: repeat(5, minmax(110px, 1fr));
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mode-card {
+      min-height: 126px;
+      border: 0;
+      border-radius: 20px;
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: 0 7px 0 #c7e5f7, 0 12px 22px rgba(46, 118, 165, .17);
+      padding: 14px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .mode-card:hover {
+      transform: translateY(-5px) rotate(-1deg);
+      box-shadow: 0 10px 0 #c7e5f7, 0 18px 28px rgba(46, 118, 165, .22);
+    }
+    .mode-icon {
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #e9f7ff;
+      color: #1976bd;
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 800;
+    }
+    .mode-card:nth-child(3n) .mode-icon { background: #ffe6e7; color: #e33f52; }
+    .mode-card:nth-child(4n) .mode-icon { background: #fff3ca; color: #bd7200; }
+    .mode-card span { font-size: .92rem; font-weight: 700; }
+
+    .game-screen { display: none; }
+    .game-screen.active { display: flex; flex-direction: column; }
+
+    .game-header {
+      width: min(1160px, 100%);
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .game-header h1 { margin: 0; text-align: center; flex: 1; }
+    .back-button {
+      border: 0;
+      border-radius: 14px;
+      min-width: 48px;
+      min-height: 44px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 0 #bddded;
+      transition: transform .16s ease;
+    }
+    .back-button:hover { transform: translateY(-2px); }
+    .back-button i { width: 21px; height: 21px; }
+
+    .game-layout {
+      width: min(1160px, 100%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: minmax(235px, 1fr) minmax(300px, 1.35fr) minmax(235px, 1fr);
+      align-items: center;
+      gap: 20px;
+    }
+
+    .player-panel {
+      border-radius: 26px;
+      padding: 20px;
+      box-shadow: 0 10px 0 rgba(21, 105, 167, .14), 0 22px 32px rgba(37, 105, 149, .14);
+    }
+    .player-panel h2 { margin: 0 0 7px; text-align: center; }
+    .score-line { text-align: center; margin: 0 0 16px; font-weight: 700; }
+    .question-box {
+      min-height: 74px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: rgba(255,255,255,.86);
+      border-radius: 15px;
+      padding: 12px;
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .answer-input {
+      width: 100%;
+      height: 46px;
+      border: 3px solid #b9dbed;
+      border-radius: 13px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      background: #fff;
+    }
+    .answer-status {
+      height: 24px;
+      text-align: center;
+      font-weight: 700;
+      font-size: .88rem;
+      padding-top: 5px;
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 7px;
+    }
+    .key {
+      min-height: 39px;
+      border: 0;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 3px 0 rgba(46, 112, 155, .22);
+      font-weight: 800;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .key:hover { transform: translateY(-2px); background: #f4fbff; }
+    .key:active { transform: translateY(2px); box-shadow: none; }
+    .key-clear { background: #ffe2e4; color: #c93245; }
+    .key-go { background: #ef4e5c; color: white; }
+
+    .arena {
+      position: relative;
+      min-height: 395px;
+      border-radius: 32px;
+      overflow: hidden;
+      background: linear-gradient(#d9f4ff 0%, #d9f4ff 68%, #a8df86 68%, #8ed271 100%);
+      box-shadow: inset 0 0 0 5px rgba(255,255,255,.54), 0 12px 28px rgba(44, 115, 150, .18);
+    }
+    .arena::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,.58) 1px, transparent 1px);
+      background-size: 16px 16px;
+      opacity: .35;
+    }
+    .arena-title {
+      position: absolute;
+      top: 18px;
+      width: 100%;
+      z-index: 2;
+      text-align: center;
+      font-size: .82rem;
+      font-weight: 800;
+      color: #2575ad;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .center-line {
+      position: absolute;
+      width: 5px;
+      height: 116px;
+      left: 50%;
+      bottom: 55px;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(to bottom, #fff 0 10px, transparent 10px 17px);
+      opacity: .9;
+    }
+    .rope {
+      position: absolute;
+      z-index: 3;
+      left: 9%;
+      right: 9%;
+      top: 54%;
+      height: 12px;
+      border-radius: 20px;
+      background: repeating-linear-gradient(45deg, #9a6533 0 6px, #c08a54 6px 12px);
+      box-shadow: 0 3px 2px rgba(92, 53, 20, .22);
+      transform: translateX(var(--rope-shift));
+      transition: transform .68s cubic-bezier(.19,.8,.25,1);
+    }
+    .rope-marker {
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      top: calc(54% - 13px);
+      width: 33px;
+      height: 38px;
+      border-radius: 7px;
+      background: #ef4e5c;
+      border: 3px solid white;
+      box-shadow: 0 4px 0 #c7394b;
+      transform: translateX(calc(-50% + var(--rope-shift)));
+      transition: transform .68s cubic-bezier(.19,.8,.25,1);
+    }
+
+    .kid {
+      position: absolute;
+      z-index: 4;
+      bottom: 43px;
+      width: 112px;
+      height: 198px;
+      animation: tug .9s ease-in-out infinite alternate;
+    }
+    .kid-left { left: 11%; transform: rotate(4deg); }
+    .kid-right { right: 11%; transform: scaleX(-1) rotate(4deg); animation-delay: -.45s; }
+    .head {
+      position: absolute;
+      width: 60px; height: 60px; top: 0; left: 29px;
+      border-radius: 48% 48% 45% 45%;
+      background: #f5b487;
+      border: 3px solid #174770;
+    }
+    .hair {
+      position: absolute; top: -5px; left: 25px;
+      width: 65px; height: 28px;
+      border-radius: 50% 45% 20% 20%;
+      background: #463327;
+      transform: rotate(-8deg);
+    }
+    .eye {
+      position: absolute; width: 6px; height: 8px;
+      top: 28px; background: #17314c; border-radius: 50%;
+    }
+    .eye-one { left: 20px; }.eye-two { right: 18px; }
+    .smile {
+      position: absolute; width: 20px; height: 10px; left: 20px; top: 40px;
+      border-bottom: 3px solid #9a3d3e; border-radius: 0 0 18px 18px;
+    }
+    .body {
+      position: absolute; top: 58px; left: 22px; width: 69px; height: 76px;
+      border-radius: 22px 22px 11px 11px; border: 3px solid #174770;
+    }
+    .kid-left .body { background: #2e96da; }
+    .kid-right .body { background: #ef4e5c; }
+    .arm {
+      position: absolute; width: 62px; height: 15px; top: 77px; border-radius: 16px;
+      background: #f5b487; border: 3px solid #174770; transform-origin: left center;
+    }
+    .arm-a { left: -13px; transform: rotate(14deg); }
+    .arm-b { left: 67px; transform: rotate(-28deg); }
+    .leg {
+      position: absolute; width: 17px; height: 69px; top: 127px;
+      background: #2c5278; border: 3px solid #174770; border-radius: 0 0 10px 10px;
+    }
+    .leg-a { left: 34px; transform: rotate(10deg); }
+    .leg-b { left: 65px; transform: rotate(-9deg); }
+    @keyframes tug { from { margin-bottom: 0; } to { margin-bottom: 7px; } }
+
+    .game-footer {
+      width: min(1160px, 100%);
+      margin: 18px auto 0;
+      text-align: center;
+    }
+    .game-tip { margin: 0; font-weight: 700; }
+    .creator { margin: 9px 0 0; font-size: .83rem; font-weight: 600; opacity: .78; }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(14, 74, 118, .52);
+      backdrop-filter: blur(5px);
+    }
+    .overlay.show { display: flex; }
+    .count-number {
+      width: min(250px, 70vw);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff;
+      border: 11px solid #ef4e5c;
+      color: #ef4e5c;
+      box-shadow: 0 12px 0 #b83c4b, 0 20px 50px rgba(10, 48, 78, .3);
+      animation: pop .62s ease both;
+    }
+    @keyframes pop { from { opacity: 0; transform: scale(.55) rotate(-12deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+    .winner-card {
+      width: min(440px, 100%);
+      padding: 35px 26px;
+      border-radius: 30px;
+      text-align: center;
+      box-shadow: 0 14px 0 #bddfed, 0 24px 44px rgba(9,55,89,.28);
+    }
+    .winner-badge {
+      width: 72px; height: 72px; border-radius: 50%;
+      margin: 0 auto 16px; display: grid; place-items: center;
+      background: #fff3bf; color: #cc8500;
+    }
+    .winner-badge i { width: 40px; height: 40px; }
+    .winner-card h2 { margin: 0; }
+    .winner-player { font-size: 1.18rem; font-weight: 800; margin: 10px 0 22px; }
+    .play-again {
+      border: 0;
+      padding: 13px 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 0 #c8384b;
+      font-weight: 800;
+    }
+
+    @media (max-width: 880px) {
+      .mode-grid { grid-template-columns: repeat(4, minmax(100px, 1fr)); }
+      .game-layout { grid-template-columns: 1fr 1fr; }
+      .arena { grid-column: 1 / -1; order: -1; min-height: 300px; }
+      .kid { transform: scale(.82); bottom: 22px; }
+      .kid-left { left: 13%; }.kid-right { right: 13%; }
+    }
+    @media (max-width: 570px) {
+      .screen { padding: 20px 12px; }
+      .mode-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 11px; }
+      .mode-card { min-height: 106px; }
+      .game-layout { grid-template-columns: 1fr; }
+      .arena { min-height: 245px; }
+      .player-panel { padding: 16px; }
+      .game-header h1 { font-size: 1.25rem; }
+      .kid { transform: scale(.65); bottom: 5px; }
+      .kid-left { left: 2%; }.kid-right { right: 2%; }
+    }
+  </style>
+  <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
+  <script src="/_sdk/2cfae6c35b9820dc.resizing_sdk.js" type="text/javascript" integrity="sha512-Oy+wKa9tloayelgS18tBfR707QfWMdeA8unVpm1M0/W/edVyjcRCNO6/jCvDwt/HpUta1v7sfMHiF1mAVr5RIA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <main>
+   <section id="mode-screen" class="screen mode-screen" aria-labelledby="main-title">
+    <div class="cloud cloud-a"></div>
+    <div class="cloud cloud-b"></div>
+    <div class="cloud cloud-c"></div>
+    <div class="hero-mark" aria-hidden="true">
+     <i data-lucide="trophy"></i>
+    </div>
+    <h1 id="main-title" data-template-id="main-title" class="canva-text mode-title"></h1>
+    <p data-template-id="main-subtitle" class="canva-text mode-subtitle"></p>
+    <div class="mode-grid" aria-label="Pilihan mode permainan"><button data-template-id="mode-add" class="canva-card mode-card" type="button" data-mode="add"><span class="mode-icon">+</span><span></span></button> <button data-template-id="mode-subtract" class="canva-card mode-card" type="button" data-mode="subtract"><span class="mode-icon">−</span><span></span></button> <button data-template-id="mode-multiply" class="canva-card mode-card" type="button" data-mode="multiply"><span class="mode-icon">×</span><span></span></button> <button data-template-id="mode-divide" class="canva-card mode-card" type="button" data-mode="divide"><span class="mode-icon">÷</span><span></span></button> <button data-template-id="mode-square" class="canva-card mode-card" type="button" data-mode="square"><span class="mode-icon">x²</span><span></span></button> <button data-template-id="mode-cube" class="canva-card mode-card" type="button" data-mode="cube"><span class="mode-icon">x³</span><span></span></button> <button data-template-id="mode-root" class="canva-card mode-card" type="button" data-mode="root"><span class="mode-icon">√</span><span></span></button> <button data-template-id="mode-cuberoot" class="canva-card mode-card" type="button" data-mode="cuberoot"><span class="mode-icon">³√</span><span></span></button> <button data-template-id="mode-percent" class="canva-card mode-card" type="button" data-mode="percent"><span class="mode-icon">%</span><span></span></button> <button data-template-id="mode-fpb" class="canva-card mode-card" type="button" data-mode="gcd"><span class="mode-icon">FPB</span><span></span></button> <button data-template-id="mode-kpk" class="canva-card mode-card" type="button" data-mode="lcm"><span class="mode-icon">KPK</span><span></span></button> <button data-template-id="mode-length" class="canva-card mode-card" type="button" data-mode="length"><span class="mode-icon">cm</span><span></span></button> <button data-template-id="mode-weight" class="canva-card mode-card" type="button" data-mode="weight"><span class="mode-icon">kg</span><span></span></button> <button data-template-id="mode-time" class="canva-card mode-card" type="button" data-mode="time"><span class="mode-icon">⏱</span><span></span></button> <button data-template-id="mode-distance" class="canva-card mode-card" type="button" data-mode="distance"><span class="mode-icon">km</span><span></span></button> <button data-template-id="mode-fraction" class="canva-card mode-card" type="button" data-mode="fraction"><span class="mode-icon">½</span><span></span></button> <button data-template-id="mode-ratio" class="canva-card mode-card" type="button" data-mode="ratio"><span class="mode-icon">a:b</span><span></span></button> <button data-template-id="mode-mixed" class="canva-card mode-card" type="button" data-mode="mixed"><span class="mode-icon">?</span><span></span></button> <button data-template-id="mode-negative" class="canva-card mode-card" type="button" data-mode="negative"><span class="mode-icon">±</span><span></span></button> <button data-template-id="mode-average" class="canva-card mode-card" type="button" data-mode="average"><span class="mode-icon">x̄</span><span></span></button>
+    </div>
+   </section>
+   <section id="game-screen" class="screen game-screen" aria-labelledby="game-title">
+    <header class="game-header"><button id="back-button" data-template-id="back-button" class="canva-button back-button" type="button" aria-label="Kembali ke pilihan mode"> <i data-lucide="arrow-left"></i> </button>
+     <h1 id="game-title" data-template-id="game-title" class="canva-text"></h1>
+     <div style="width:48px" aria-hidden="true"></div>
+    </header>
+    <div class="game-layout">
+     <section data-template-id="left-panel" class="canva-panel player-panel" aria-labelledby="left-player-title">
+      <h2 id="left-player-title" data-template-id="left-player-title" class="canva-text"></h2>
+      <p class="score-line">Skor: <span id="left-score">0</span>/5</p>
+      <div id="left-question" class="question-box" aria-live="polite"></div><label data-template-id="left-answer-label" class="canva-text sr-only" for="left-answer"></label> <input id="left-answer" class="canva-input answer-input" type="text" inputmode="numeric" autocomplete="off">
+      <div id="left-status" class="answer-status" aria-live="polite"></div>
+      <div class="keypad" data-player="left"><button class="key" type="button">1</button><button class="key" type="button">2</button><button class="key" type="button">3</button> <button class="key" type="button">4</button><button class="key" type="button">5</button><button class="key" type="button">6</button> <button class="key" type="button">7</button><button class="key" type="button">8</button><button class="key" type="button">9</button> <button class="key key-clear" type="button">C</button><button class="key" type="button">0</button><button class="key key-go" type="button">Go</button>
+      </div>
+     </section>
+     <section class="arena" aria-label="Arena tarik tambang">
+      <div data-template-id="arena-label" class="canva-text arena-title"></div>
+      <div class="center-line" aria-hidden="true"></div>
+      <div id="rope" class="rope" aria-hidden="true"></div>
+      <div id="rope-marker" class="rope-marker" aria-hidden="true"></div>
+      <div class="kid kid-left" aria-hidden="true">
+       <div class="head">
+        <div class="hair"></div>
+        <div class="eye eye-one"></div>
+        <div class="eye eye-two"></div>
+        <div class="smile"></div>
+       </div>
+       <div class="body"></div>
+       <div class="arm arm-a"></div>
+       <div class="arm arm-b"></div>
+       <div class="leg leg-a"></div>
+       <div class="leg leg-b"></div>
+      </div>
+      <div class="kid kid-right" aria-hidden="true">
+       <div class="head">
+        <div class="hair"></div>
+        <div class="eye eye-one"></div>
+        <div class="eye eye-two"></div>
+        <div class="smile"></div>
+       </div>
+       <div class="body"></div>
+       <div class="arm arm-a"></div>
+       <div class="arm arm-b"></div>
+       <div class="leg leg-a"></div>
+       <div class="leg leg-b"></div>
+      </div>
+     </section>
+     <section data-template-id="right-panel" class="canva-panel player-panel" aria-labelledby="right-player-title">
+      <h2 id="right-player-title" data-template-id="right-player-title" class="canva-text"></h2>
+      <p class="score-line">Skor: <span id="right-score">0</span>/5</p>
+      <div id="right-question" class="question-box" aria-live="polite"></div><label data-template-id="right-answer-label" class="canva-text sr-only" for="right-answer"></label> <input id="right-answer" class="canva-input answer-input" type="text" inputmode="numeric" autocomplete="off">
+      <div id="right-status" class="answer-status" aria-live="polite"></div>
+      <div class="keypad" data-player="right"><button class="key" type="button">1</button><button class="key" type="button">2</button><button class="key" type="button">3</button> <button class="key" type="button">4</button><button class="key" type="button">5</button><button class="key" type="button">6</button> <button class="key" type="button">7</button><button class="key" type="button">8</button><button class="key" type="button">9</button> <button class="key key-clear" type="button">C</button><button class="key" type="button">0</button><button class="key key-go" type="button">Go</button>
+      </div>
+     </section>
+    </div>
+    <footer class="game-footer">
+     <p data-template-id="game-tip" class="canva-text game-tip"></p>
+     <p data-template-id="creator-text" class="canva-text creator"></p>
+    </footer>
+   </section>
+  </main>
+  <div id="countdown-overlay" class="overlay" aria-live="assertive" aria-label="Hitung mundur permainan">
+   <div id="countdown-number" class="count-number">
+    3
+   </div>
+  </div>
+  <div id="winner-overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="winner-message">
+   <div data-template-id="winner-card" class="canva-card winner-card">
+    <div class="winner-badge" aria-hidden="true">
+     <i data-lucide="trophy"></i>
+    </div>
+    <h2 id="winner-message" data-template-id="winner-message" class="canva-text"></h2>
+    <p id="winner-player" class="winner-player" aria-live="polite"></p><button id="play-again-button" data-template-id="play-again-button" class="canva-button play-again" type="button"></button>
+   </div>
+  </div>
+  <script src="/_sdk/0aac212797dcb9a6.editing_sdk.js" integrity="sha512-U1Z5TGB/MTX0fFSADhP7rVM3+UzJJjKTapiY1vm1cxcbcyWo4eBuCJNJO6zARJ5kHopP9UvWNtPszOqzRc1ICA=="></script>
+  <script>
+    const state = {
+      mode: "mixed",
+      started: false,
+      scores: { left: 0, right: 0 },
+      questions: { left: null, right: null }
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    function gcd(a, b) {
+      while (b !== 0) [a, b] = [b, a % b];
+      return a;
+    }
+
+    function lcm(a, b) {
+      return Math.abs(a * b) / gcd(a, b);
+    }
+
+    function makeQuestion(mode) {
+      if (mode === "mixed") {
+        const choices = ["add", "subtract", "multiply", "divide", "square", "root", "percent", "length", "time"];
+        mode = choices[random(0, choices.length - 1)];
+      }
+
+      let a, b, answer, text;
+      switch (mode) {
+        case "add":
+          a = random(15, 90); b = random(10, 85); answer = a + b; text = `${a} + ${b} = ...`; break;
+        case "subtract":
+          a = random(35, 99); b = random(10, a - 5); answer = a - b; text = `${a} − ${b} = ...`; break;
+        case "multiply":
+          a = random(3, 12); b = random(3, 12); answer = a * b; text = `${a} × ${b} = ...`; break;
+        case "divide":
+          b = random(2, 12); answer = random(2, 12); a = b * answer; text = `${a} ÷ ${b} = ...`; break;
+        case "square":
+          a = random(2, 12); answer = a * a; text = `${a}² = ...`; break;
+        case "cube":
+          a = random(2, 6); answer = a * a * a; text = `${a}³ = ...`; break;
+        case "root":
+          answer = random(2, 15); a = answer * answer; text = `√${a} = ...`; break;
+        case "cuberoot":
+          answer = random(2, 8); a = answer ** 3; text = `³√${a} = ...`; break;
+        case "percent":
+          a = random(1, 9) * 10; b = random(2, 9) * 10; answer = (a / 100) * b; text = `${a}% dari ${b} = ...`; break;
+        case "gcd":
+          a = random(2, 10); b = random(2, 10); answer = gcd(a * random(2, 5), b * random(2, 5)); text = `FPB dari ${a * 4} dan ${b * 4} = ...`; answer = 4 * gcd(a, b); break;
+        case "lcm":
+          a = random(2, 8); b = random(3, 9); answer = lcm(a, b); text = `KPK dari ${a} dan ${b} = ...`; break;
+        case "length":
+          a = random(2, 9); answer = a * 100; text = `${a} m = ... cm`; break;
+        case "weight":
+          a = random(2, 8); answer = a * 1000; text = `${a} kg = ... g`; break;
+        case "time":
+          a = random(2, 9); answer = a * 60; text = `${a} jam = ... menit`; break;
+        case "distance":
+          a = random(2, 9); answer = a * 1000; text = `${a} km = ... m`; break;
+        case "fraction":
+          b = random(2, 10); a = random(1, b - 1); answer = a * 10; text = `${a}/${b} dari ${b * 10} = ...`; break;
+        case "ratio":
+          a = random(2, 8); b = random(2, 8); answer = a + b; text = `Perbandingan ${a}:${b}, jumlah bagian = ...`; break;
+        case "negative":
+          a = random(4, 18); b = random(4, 18); answer = -a + b; text = `−${a} + ${b} = ...`; break;
+        case "average":
+          a = random(4, 15); b = random(4, 15); answer = (a + b) / 2; text = `Rata-rata ${a} dan ${b} = ...`; break;
+        default:
+          answer = 1; text = "1 + 0 = ...";
+      }
+      return { text, answer };
+    }
+
+    function renderQuestion(player) {
+      state.questions[player] = makeQuestion(state.mode);
+      $(`${player}-question`).textContent = state.questions[player].text;
+      $(`${player}-answer`).value = "";
+      $(`${player}-status`).textContent = "";
+    }
+
+    function playTone(type) {
+      try {
+        const context = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = context.createOscillator();
+        const gain = context.createGain();
+        oscillator.connect(gain);
+        gain.connect(context.destination);
+        oscillator.type = type === "correct" ? "triangle" : "sawtooth";
+        oscillator.frequency.value = type === "correct" ? 660 : 150;
+        gain.gain.setValueAtTime(.08, context.currentTime);
+        gain.gain.exponentialRampToValueAtTime(.001, context.currentTime + (type === "correct" ? .25 : .14));
+        oscillator.start();
+        oscillator.stop(context.currentTime + (type === "correct" ? .25 : .14));
+      } catch (e) {}
+    }
+
+    function updateRope() {
+      const pull = (state.scores.right - state.scores.left) * 7;
+      document.documentElement.style.setProperty("--rope-shift", `${pull}%`);
+    }
+
+    function checkAnswer(player) {
+      if (!state.started) return;
+      const input = $(`${player}-answer`);
+      const submitted = Number(input.value);
+      const question = state.questions[player];
+
+      if (input.value.trim() === "") return;
+
+      if (submitted === question.answer) {
+        state.scores[player] += 1;
+        $(`${player}-score`).textContent = state.scores[player];
+        $(`${player}-status`).textContent = "Benar! Tarik talinya!";
+        $(`${player}-status`).style.color = "#198754";
+        playTone("correct");
+        updateRope();
+
+        if (state.scores[player] >= 5) {
+          state.started = false;
+          setTimeout(() => showWinner(player), 650);
+        } else {
+          setTimeout(() => renderQuestion(player), 450);
+        }
+      } else {
+        $(`${player}-status`).textContent = "Belum tepat, coba lagi!";
+        $(`${player}-status`).style.color = "#d53b4c";
+        input.value = "";
+        playTone("wrong");
+      }
+    }
+
+    function showWinner(player) {
+      $("winner-player").textContent = player === "left" ? "Pemain Biru memenangkan pertandingan!" : "Pemain Merah memenangkan pertandingan!";
+      $("winner-overlay").classList.add("show");
+      playTone("correct");
+    }
+
+    async function startCountdown() {
+      const overlay = $("countdown-overlay");
+      const number = $("countdown-number");
+      overlay.classList.add("show");
+
+      for (const value of ["3", "2", "1", "Mulai!"]) {
+        number.textContent = value;
+        number.style.animation = "none";
+        void number.offsetWidth;
+        number.style.animation = "pop .62s ease both";
+        playTone(value === "Mulai!" ? "correct" : "wrong");
+        await new Promise(resolve => setTimeout(resolve, value === "Mulai!" ? 800 : 850));
+      }
+
+      overlay.classList.remove("show");
+      state.started = true;
+      $("left-answer").focus();
+    }
+
+    function beginGame(mode) {
+      state.mode = mode;
+      state.scores = { left: 0, right: 0 };
+      state.started = false;
+      $("left-score").textContent = "0";
+      $("right-score").textContent = "0";
+      updateRope();
+      renderQuestion("left");
+      renderQuestion("right");
+      $("mode-screen").style.display = "none";
+      $("game-screen").classList.add("active");
+      startCountdown();
+    }
+
+    function returnToModes() {
+      state.started = false;
+      $("game-screen").classList.remove("active");
+      $("mode-screen").style.display = "flex";
+      $("winner-overlay").classList.remove("show");
+    }
+
+    document.querySelectorAll(".mode-card").forEach(card => {
+      card.addEventListener("click", () => beginGame(card.dataset.mode));
+    });
+
+    document.querySelectorAll(".keypad").forEach(keypad => {
+      keypad.addEventListener("click", (event) => {
+        const key = event.target.closest(".key");
+        if (!key || !state.started) return;
+        const player = keypad.dataset.player;
+        const input = $(`${player}-answer`);
+        const value = key.textContent.trim();
+
+        if (value === "C") input.value = "";
+        else if (value === "Go") checkAnswer(player);
+        else if (input.value.length < 8) input.value += value;
+        input.focus();
+      });
+    });
+
+    ["left", "right"].forEach(player => {
+      $(`${player}-answer`).addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          checkAnswer(player);
+        }
+      });
+    });
+
+    $("back-button").addEventListener("click", returnToModes);
+    $("play-again-button").addEventListener("click", returnToModes);
+
+    lucide.createIcons();
+  </script>
+ </body>
+</html>
